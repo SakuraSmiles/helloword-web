@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <router-view class="content"></router-view>
     <div class="center-logo">
     </div>
     <vue-particles color="#fff"
@@ -19,7 +20,6 @@
                    clickMode="push"
                    class="particles-js">
     </vue-particles>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -61,6 +61,14 @@ body {
 .particles-js {
   height: 100%;
   width: 100%;
+  position: absolute;
+  top:0;
+  z-index: 0;
   /**background-image: url("./assets/img/index_background.gif");**/
+}
+.content{
+  position: relative;
+  z-index: 20;
+  min-height: 100%;
 }
 </style>
