@@ -3,16 +3,16 @@
     <router-view class="content"></router-view>
     <div class="center-logo">
     </div>
-    <vue-particles color="#fff"
-                   :particleOpacity="0.7"
+    <vue-particles color="#fb7710"
+                   :particleOpacity="1"
                    :particlesNumber="30"
                    shapeType="circle"
-                   :particleSize="3"
-                   linesColor="#fff"
-                   :linesWidth="0.5"
+                   :particleSize="4"
+                   linesColor="#fb7710"
+                   :linesWidth="0.8"
                    :lineLinked="true"
                    :lineOpacity="0.4"
-                   :linesDistance="100"
+                   :linesDistance="120"
                    :moveSpeed="4"
                    :hoverEffect="true"
                    hoverMode="grab"
@@ -36,7 +36,7 @@ body {
   position: fixed;
   height: 100%;
   width: 100%;
-  background-color: #0e1421;
+  background-color: #ddd9d1;
 }
 #app {
   height: 100%;
@@ -62,11 +62,11 @@ body {
   height: 100%;
   width: 100%;
   position: absolute;
-  top:0;
+  top: 0;
   z-index: 0;
   /**background-image: url("./assets/img/index_background.gif");**/
 }
-.content{
+.content {
   position: relative;
   z-index: 20;
   min-height: 100%;
