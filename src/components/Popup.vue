@@ -1,5 +1,5 @@
 <template>
-  <div @touchmove="onTouchMove">
+  <div @touchmove="onTouchMove" :style="styleObject">
     <!-- 遮罩层动画 -->
     <div class="mask" @click="hideOnBlur && (currentValue = false)" v-show="currentValue"></div>
     <input style="display:none" v-model="currentValue">
@@ -34,6 +34,10 @@ export default {
     scroll: {
       type: Boolean,
       default: true
+    },
+    bgColor: {
+      type: String,
+      default: '#2d3a4b'
     }
   },
   created () {
@@ -60,6 +64,13 @@ export default {
     onTouchMove: function (event) {
       !this.scroll && event.preventDefault()
     }
+  },
+  computed: {
+    styleObject: function () {
+      return {
+        '--bgcolor': this.bgColor
+      }
+    }
   }
 }
 </script>
@@ -78,7 +89,7 @@ export default {
     position: fixed;
     bottom: 0px;
     right: 0px;
-    background-color: #2d3a4b;
+    background-color: var(--bgcolor);
     max-height: 100%;
     min-height: 100%;
     z-index: 51;
